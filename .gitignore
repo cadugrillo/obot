@@ -34,6 +34,7 @@ vendor/
 *.swo
 *.bak
 *.old
+zz_credentials.txt
 
 # Ignore IDE specific files
 .vscode/
