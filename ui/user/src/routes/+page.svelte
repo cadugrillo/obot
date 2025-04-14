@@ -129,7 +129,7 @@
 			<h1 class="text-2xl font-bold md:text-3xl">Where Ai Agents Come to Life</h1>
 			<p class="mt-4 max-w-full text-base md:max-w-2xl md:text-xl">
 				Design custom Ai assistants with specific skills, all without coding knowledge. Whether
-				you're automating personal tasks or building professional solutions, merbots gives you
+				you're automating personal tasks or building professional solutions, obots gives you
 				the power of Ai agents without the complexity.
 			</p>
 		</div>

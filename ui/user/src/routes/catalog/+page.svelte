@@ -78,7 +78,7 @@
 					href={from}
 					class="button-text flex w-fit items-center gap-1 pb-0 text-base font-semibold text-black md:text-lg dark:text-white"
 				>
-					<ChevronLeft class="size-5" />{from.includes('home') ? 'My Merbots' : 'Go Back'}
+					<ChevronLeft class="size-5" />{from.includes('home') ? 'My Obots' : 'Go Back'}
 				</a>
 			</div>
 		{/if}
@@ -88,7 +88,7 @@
 			>
 				<h2 class="text-3xl font-semibold md:text-4xl">Welcome To Obot</h2>
 				<p class="text-md mb-4 max-w-full text-center md:max-w-md">
-					Check out our featured Merbots below, or browse all Merbots to find the perfect one for you.
+					Check out our featured Obots below, or browse all Obots to find the perfect one for you.
 					Or if you're feeling adventurous, get started and create your own obot!
 				</p>
 			</div>
@@ -110,7 +110,7 @@
 			<div
 				class="sticky top-0 z-30 flex items-center gap-4 bg-white px-4 pt-4 pb-2 md:px-12 dark:bg-black"
 			>
-				<h3 class="text-2xl font-semibold">More Merbots</h3>
+				<h3 class="text-2xl font-semibold">More Obots</h3>
 			</div>
 			<div class="card-layout px-4 pt-2 md:px-12">
 				{#each data.shares.slice(4) as project}

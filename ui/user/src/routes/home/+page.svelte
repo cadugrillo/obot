@@ -101,7 +101,7 @@
 				<div
 					class="sticky top-0 z-30 flex items-center gap-4 bg-white px-4 py-4 md:px-12 dark:bg-black"
 				>
-					<h3 class="flex flex-shrink-0 text-2xl font-semibold">My Merbots</h3>
+					<h3 class="flex flex-shrink-0 text-2xl font-semibold">My Obots</h3>
 					<button
 						class="button flex items-center gap-1 text-xs font-medium"
 						onclick={() => createNew()}
@@ -129,7 +129,7 @@
 										toDelete = project;
 									}}
 									use:tooltip={recentlyUsedProjectsMap.has(project.id)
-										? 'Remove From My Merbots'
+										? 'Remove From My Obots'
 										: 'Delete Obot'}
 								>
 									{#if recentlyUsedProjectsMap.has(project.id)}
