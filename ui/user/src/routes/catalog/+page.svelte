@@ -21,14 +21,21 @@
 <div class="flex h-full flex-col items-center">
 	<div class="flex h-16 w-full items-center p-4 md:p-5">
 		<a href="/home" class="relative flex items-end">
+			<!-- @merbot-customization: Logo -->
+			<span class="ml-1.5 inline-block align-text-bottom text-[25px] font-medium text-[#530097]"
+				>merbo</span
+			>
+			<span class="mr-1.5 inline-block align-text-bottom text-[25px] text-[#ff00b2]">t</span>
+			<span class="mx-1.5 inline-block align-text-bottom text-[8px]">powered by</span>
 			{#if darkMode.isDark}
-				<img src="/user/images/obot-logo-blue-white-text.svg" class="h-12" alt="Obot logo" />
+				<img src="/user/images/obot-logo-blue-white-text.svg" class="h-5" alt="Obot logo" />
 			{:else}
-				<img src="/user/images/obot-logo-blue-black-text.svg" class="h-12" alt="Obot logo" />
+				<img src="/user/images/obot-logo-blue-black-text.svg" class="h-5" alt="Obot logo" />
 			{/if}
+			<!-- @merbot-customization: Logo -->
 			<div class="ml-1.5 -translate-y-1">
 				<span
-					class="rounded-full border-2 border-blue-400 px-1.5 py-[1px] text-[10px] font-bold text-blue-400 dark:border-blue-400 dark:text-blue-400"
+					class="rounded-full border-2 border-blue-400 px-1.5 py-[1px] text-[5px] font-bold text-blue-400 dark:border-blue-400 dark:text-blue-400"
 				>
 					BETA
 				</span>
@@ -37,15 +44,16 @@
 		<div class="grow"></div>
 		<div class="flex items-center gap-1">
 			{#if !responsive.isMobile}
+				<!-- @merbot-customization: Disable navLinks -->
 				<a href="https://docs.obot.ai" rel="external" target="_blank" class="icon-button">Docs</a>
-				<a href="https://discord.gg/9sSf4UyAMC" rel="external" target="_blank" class="icon-button">
+				<!-- <a href="https://discord.gg/9sSf4UyAMC" rel="external" target="_blank" class="icon-button">
 					{#if darkMode.isDark}
 						<img src="/user/images/discord-mark/discord-mark-white.svg" alt="Discord" class="h-6" />
 					{:else}
 						<img src="/user/images/discord-mark/discord-mark.svg" alt="Discord" class="h-6" />
 					{/if}
-				</a>
-				<a
+				</a> -->
+				<!-- <a
 					href="https://github.com/obot-platform/obot"
 					rel="external"
 					target="_blank"
@@ -56,7 +64,7 @@
 					{:else}
 						<img src="/user/images/github-mark/github-mark.svg" alt="GitHub" class="h-6" />
 					{/if}
-				</a>
+				</a> -->
 			{/if}
 			<Profile />
 		</div>
@@ -70,7 +78,7 @@
 					href={from}
 					class="button-text flex w-fit items-center gap-1 pb-0 text-base font-semibold text-black md:text-lg dark:text-white"
 				>
-					<ChevronLeft class="size-5" />{from.includes('home') ? 'My Obots' : 'Go Back'}
+					<ChevronLeft class="size-5" />{from.includes('home') ? 'My Merbots' : 'Go Back'}
 				</a>
 			</div>
 		{/if}
@@ -80,7 +88,7 @@
 			>
 				<h2 class="text-3xl font-semibold md:text-4xl">Welcome To Obot</h2>
 				<p class="text-md mb-4 max-w-full text-center md:max-w-md">
-					Check out our featured obots below, or browse all obots to find the perfect one for you.
+					Check out our featured Merbots below, or browse all Merbots to find the perfect one for you.
 					Or if you're feeling adventurous, get started and create your own obot!
 				</p>
 			</div>
@@ -102,7 +110,7 @@
 			<div
 				class="sticky top-0 z-30 flex items-center gap-4 bg-white px-4 pt-4 pb-2 md:px-12 dark:bg-black"
 			>
-				<h3 class="text-2xl font-semibold">More Obots</h3>
+				<h3 class="text-2xl font-semibold">More Merbots</h3>
 			</div>
 			<div class="card-layout px-4 pt-2 md:px-12">
 				{#each data.shares.slice(4) as project}

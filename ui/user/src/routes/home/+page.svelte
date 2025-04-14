@@ -44,14 +44,21 @@
 <div class="flex h-full flex-col items-center">
 	<div class="flex h-16 w-full items-center p-4 md:p-5">
 		<div class="relative flex items-end">
+			<!-- @merbot-customization: Logo -->
+			<span class="ml-1.5 inline-block align-text-bottom text-[25px] font-medium text-[#530097]"
+				>merbo</span
+			>
+			<span class="mr-1.5 inline-block align-text-bottom text-[25px] text-[#ff00b2]">t</span>
+			<span class="mx-1.5 inline-block align-text-bottom text-[8px]">powered by</span>
 			{#if darkMode.isDark}
-				<img src="/user/images/obot-logo-blue-white-text.svg" class="h-12" alt="Obot logo" />
+				<img src="/user/images/obot-logo-blue-white-text.svg" class="h-5" alt="Obot logo" />
 			{:else}
-				<img src="/user/images/obot-logo-blue-black-text.svg" class="h-12" alt="Obot logo" />
+				<img src="/user/images/obot-logo-blue-black-text.svg" class="h-5" alt="Obot logo" />
 			{/if}
+			<!-- @merbot-customization: Logo -->
 			<div class="ml-1.5 -translate-y-1">
 				<span
-					class="rounded-full border-2 border-blue-400 px-1.5 py-[1px] text-[10px] font-bold text-blue-400 dark:border-blue-400 dark:text-blue-400"
+					class="rounded-full border-2 border-blue-400 px-1.5 py-[1px] text-[5px] font-bold text-blue-400 dark:border-blue-400 dark:text-blue-400"
 				>
 					BETA
 				</span>
@@ -61,14 +68,15 @@
 		<div class="flex items-center gap-1">
 			{#if !responsive.isMobile}
 				<a href="https://docs.obot.ai" rel="external" target="_blank" class="icon-button">Docs</a>
-				<a href="https://discord.gg/9sSf4UyAMC" rel="external" target="_blank" class="icon-button">
+				<!-- @merbot-customization: Disable navLinks -->
+				<!-- <a href="https://discord.gg/9sSf4UyAMC" rel="external" target="_blank" class="icon-button">
 					{#if darkMode.isDark}
 						<img src="/user/images/discord-mark/discord-mark-white.svg" alt="Discord" class="h-6" />
 					{:else}
 						<img src="/user/images/discord-mark/discord-mark.svg" alt="Discord" class="h-6" />
 					{/if}
-				</a>
-				<a
+				</a> -->
+				<!-- <a
 					href="https://github.com/obot-platform/obot"
 					rel="external"
 					target="_blank"
@@ -79,7 +87,7 @@
 					{:else}
 						<img src="/user/images/github-mark/github-mark.svg" alt="GitHub" class="h-6" />
 					{/if}
-				</a>
+				</a> -->
 			{/if}
 			<Profile />
 		</div>
@@ -93,7 +101,7 @@
 				<div
 					class="sticky top-0 z-30 flex items-center gap-4 bg-white px-4 py-4 md:px-12 dark:bg-black"
 				>
-					<h3 class="flex flex-shrink-0 text-2xl font-semibold">My Obots</h3>
+					<h3 class="flex flex-shrink-0 text-2xl font-semibold">My Merbots</h3>
 					<button
 						class="button flex items-center gap-1 text-xs font-medium"
 						onclick={() => createNew()}
@@ -121,7 +129,7 @@
 										toDelete = project;
 									}}
 									use:tooltip={recentlyUsedProjectsMap.has(project.id)
-										? 'Remove From My Obots'
+										? 'Remove From My Merbots'
 										: 'Delete Obot'}
 								>
 									{#if recentlyUsedProjectsMap.has(project.id)}

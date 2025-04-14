@@ -41,15 +41,16 @@
 </script>
 
 {#snippet navLinks()}
+	<!-- @merbot-customization: Disable navLinks -->
 	<a href="https://docs.obot.ai" class="icon-button" rel="external" target="_blank">Docs</a>
-	<a href="https://discord.gg/9sSf4UyAMC" class="icon-button" rel="external" target="_blank">
+	<!-- <a href="https://discord.gg/9sSf4UyAMC" class="icon-button" rel="external" target="_blank">
 		{#if darkMode.isDark}
 			<img src="/user/images/discord-mark/discord-mark-white.svg" alt="Discord" class="h-6" />
 		{:else}
 			<img src="/user/images/discord-mark/discord-mark.svg" alt="Discord" class="h-6" />
 		{/if}
-	</a>
-	<a
+	</a> -->
+	<!-- <a
 		href="https://github.com/obot-platform/obot"
 		class="icon-button"
 		rel="external"
@@ -60,7 +61,7 @@
 		{:else}
 			<img src="/user/images/github-mark/github-mark.svg" alt="GitHub" class="h-6" />
 		{/if}
-	</a>
+	</a> -->
 {/snippet}
 
 <svelte:head>
@@ -71,14 +72,21 @@
 	<!-- Header with logo and navigation -->
 	<div class="colors-background flex h-16 w-full items-center p-5">
 		<div class="relative flex items-end">
+			<!-- @merbot-customization: Logo -->
+			<span class="ml-1.5 inline-block align-text-bottom text-[25px] font-medium text-[#530097]"
+				>merbo</span
+			>
+			<span class="mr-1.5 inline-block align-text-bottom text-[25px] text-[#ff00b2]">t</span>
+			<span class="mx-1.5 inline-block align-text-bottom text-[8px]">powered by</span>
 			{#if darkMode.isDark}
-				<img src="/user/images/obot-logo-blue-white-text.svg" class="h-12" alt="Obot logo" />
+				<img src="/user/images/obot-logo-blue-white-text.svg" class="h-5" alt="Obot logo" />
 			{:else}
-				<img src="/user/images/obot-logo-blue-black-text.svg" class="h-12" alt="Obot logo" />
+				<img src="/user/images/obot-logo-blue-black-text.svg" class="h-5" alt="Obot logo" />
 			{/if}
+			<!-- @merbot-customization: Logo -->
 			<div class="ml-1.5 -translate-y-1">
 				<span
-					class="rounded-full border-2 border-blue-400 px-1.5 py-[1px] text-[10px] font-bold text-blue-400 dark:border-blue-400 dark:text-blue-400"
+					class="rounded-full border-2 border-blue-400 px-1.5 py-[1px] text-[5px] font-bold text-blue-400 dark:border-blue-400 dark:text-blue-400"
 				>
 					BETA
 				</span>
@@ -117,9 +125,12 @@
 		class="colors-background mx-auto flex w-full max-w-(--breakpoint-2xl) flex-col items-center justify-center px-4 pb-12 md:px-12"
 	>
 		<div class="mt-16 mb-8 flex flex-col items-center text-center">
-			<h1 class="text-2xl font-bold md:text-3xl">Do more with AI</h1>
+			<!-- @merbot-customization: Welcome Page -->
+			<h1 class="text-2xl font-bold md:text-3xl">Where Ai Agents Come to Life</h1>
 			<p class="mt-4 max-w-full text-base md:max-w-2xl md:text-xl">
-				Introducing Obot, a free platform for creating and sharing AI agents.
+				Design custom Ai assistants with specific skills, all without coding knowledge. Whether
+				you're automating personal tasks or building professional solutions, merbots gives you
+				the power of Ai agents without the complexity.
 			</p>
 		</div>
 

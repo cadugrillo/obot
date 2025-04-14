@@ -44,19 +44,20 @@
 	--color-red-900: #7f1d1d;
 	--color-red-950: #450a0a;
 
-	--color-blue-50: #eff5ff;
-	--color-blue-100: #dce7fd;
-	--color-blue-200: #c0d5fd;
-	--color-blue-300: #95bcfb;
-	--color-blue-400: #6397f7;
-	--color-blue-500: #4f7ef3;
-	--color-blue-600: #2953e7;
-	--color-blue-700: #213fd4;
-	--color-blue-800: #2135ac;
-	--color-blue-900: #203188;
-	--color-blue-950: #182153;
-	--color-blue: #4f7ef3;
-
+	/* @merbot-customization: Custom Colors */
+	--color-blue-50: #fcf3ff;
+	--color-blue-100: #f7e3ff;
+	--color-blue-200: #f1ccff;
+	--color-blue-300: #e5a5ff;
+	--color-blue-400: #d66bff;
+	--color-blue-500: #c734ff;
+	--color-blue-600: #b90dff;
+	--color-blue-700: #a400f1;
+	--color-blue-800: #8405bb;
+	--color-blue-900: #72069d;
+	--color-blue-950: #4f0077;
+	--color-blue: #8405bb;
+	/* @merbot-customization: Custom Colors */
 	--text-md: 0.9375rem;
 
 	--color-black: hsl(0 0 0);

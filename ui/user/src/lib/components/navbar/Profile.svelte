@@ -84,7 +84,8 @@
 				<a href="https://docs.obot.ai" rel="external" target="_blank" class="link"
 					><Book class="size-4" />Docs</a
 				>
-				<a href="https://discord.gg/9sSf4UyAMC" rel="external" target="_blank" class="link">
+				<!-- @merbot-customization: Disable Nav Links -->
+				<!-- <a href="https://discord.gg/9sSf4UyAMC" rel="external" target="_blank" class="link">
 					{#if darkMode.isDark}
 						<img
 							src="/user/images/discord-mark/discord-mark-white.svg"
@@ -95,15 +96,15 @@
 						<img src="/user/images/discord-mark/discord-mark.svg" alt="Discord" class="size-4" />
 					{/if}
 					Discord
-				</a>
-				<a href="https://github.com/obot-platform/obot" rel="external" target="_blank" class="link">
+				</a> -->
+				<!-- <a href="https://github.com/obot-platform/obot" rel="external" target="_blank" class="link">
 					{#if darkMode.isDark}
 						<img src="/user/images/github-mark/github-mark-white.svg" alt="GitHub" class="size-4" />
 					{:else}
 						<img src="/user/images/github-mark/github-mark.svg" alt="GitHub" class="size-4" />
 					{/if}
 					Github
-				</a>
+				</a> -->
 			{/if}
 			{#if profile.current.email}
 				<a href="/oauth2/sign_out?rd=/" rel="external" role="menuitem" class="link"
