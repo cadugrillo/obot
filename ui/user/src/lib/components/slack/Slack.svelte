@@ -7,17 +7,18 @@
 		disableProjectSlack,
 		getProjectSlack
 	} from '$lib/services/chat/operations';
-	import { tools } from '$lib/stores';
 	import { ChatService, type AssistantTool } from '$lib/services';
 	import { Settings, X, CheckCircle } from 'lucide-svelte';
 	import { getLayout } from '$lib/context/layout.svelte';
 	import { responsive } from '$lib/stores';
+	import { getProjectTools } from '$lib/context/projectTools.svelte';
 	interface Props {
 		project: Project;
 	}
 
+	const projectTools = getProjectTools();
 	function getSelectionMap() {
-		return tools.current.tools
+		return projectTools.tools
 			.filter((t) => !t.builtin)
 			.reduce<Record<string, AssistantTool>>((acc, tool) => {
 				acc[tool.id] = { ...tool };
@@ -98,7 +99,7 @@
 	async function configureSlackTool() {
 		if (toolSelection['slack-bot-bundle'] && !toolSelection['slack-bot-bundle'].enabled) {
 			toolSelection['slack-bot-bundle'].enabled = true;
-			tools.setTools(Object.values(toolSelection));
+			projectTools.tools = Object.values(toolSelection);
 			await ChatService.updateProjectTools(project.assistantID, project.id, {
 				items: Object.values(toolSelection)
 			});
@@ -303,6 +304,12 @@
 						>
 							<CopyButton text="im:write" />
 							im:write
+						</div>
+						<div
+							class="flex max-w-fit items-center gap-2 rounded-full bg-gray-100 px-3 py-1 dark:bg-gray-800"
+						>
+							<CopyButton text="assistant:write" />
+							assistant:write
 						</div>
 					</div>
 				</div>
